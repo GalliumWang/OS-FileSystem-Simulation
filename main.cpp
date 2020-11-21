@@ -8,16 +8,18 @@ using namespace std;
 
 /*用户注册写入文件*/
 int regist(char username[30], char password[30]) {
+
+    int returnStatus=1;
     FILE* userfile;//文件指针
     if ((userfile = fopen("users.ini", "a+")) == NULL) {
         printf("用户验证文件无法打开\n");
-        fclose(userfile);
-        return 0;
+        returnStatus=0;
     }else {
         fprintf(userfile, "%s %s\n", username, password);
-        fclose(userfile);
-        return 1;
     }
+    
+    fclose(userfile);
+    return returnStatus;
 }
 
 /*用户名密码检验是否已经注册*/
@@ -25,7 +27,7 @@ int login(char username[30], char password[30]) {
     char user[30],pass[30];
     FILE* userfile;//文件指针
     if ((userfile = fopen("users.ini", "r")) == NULL) {
-        printf("无法验证用户是否已经注册\n");
+        printf("信息文件损坏\n");
         fclose(userfile);
         return 0;
     }
