@@ -7,9 +7,9 @@
 			"command": "/usr/bin/g++",
 			"args": [
 				"-g",
-				"${file}",
-				"/home/glliumwang/Desktop/OS_File_System/operate.cpp",
-				
+				// "${file}",
+				// "/home/glliumwang/Desktop/OS_File_System/operate.cpp",
+				"${fileDirname}/*.cpp",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}"
 			],
