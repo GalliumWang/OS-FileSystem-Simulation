@@ -36,6 +36,7 @@ private:
     OneFile* copytempfile; //用于拷贝文件时的临时文件
     OneDir* copytempdir; //用于拷贝目录时的临时目录
     OneDir* root; //根目录
+
     char password[MAX_NAME_LENGTH];   //用户密码
     char name[MAX_NAME_LENGTH];   //用户名称
     int size; //用户所使用空间大小

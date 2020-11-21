@@ -4,6 +4,9 @@
 #include  <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+
+
+#include "rang.hpp"
 using namespace std;
 
 /*用户注册写入文件*/
