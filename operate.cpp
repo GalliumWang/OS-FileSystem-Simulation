@@ -583,10 +583,10 @@ bool OneFileSystem::edFile() {
 bool OneFileSystem::show_path(OneDir* directory)//显示当前路径的函数
 {
     if (directory->preDir == nullptr)
-        cout << root->name;
+        cout<<rang::fg::green << root->name<<rang::style::reset;
     if (directory->preDir != nullptr) {
         this->show_path(directory->preDir);//递归调用此函数
-        cout << directory->name;
+        cout <<rang::fg::green<< directory->name<<rang::style::reset;
     }
     cout << "/";
     return true;

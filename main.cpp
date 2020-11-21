@@ -5,8 +5,6 @@
 #include <string.h>
 #include <unistd.h>
 
-
-#include "rang.hpp"
 using namespace std;
 
 /*用户注册写入文件*/
@@ -186,7 +184,8 @@ int main() {
     system("clear");
     while (true) {
         cout<<endl;
-        cout << "\t\t*          欢迎访问OneFileSystem              *" << endl;
+        cout<<rang::style::italic<<rang::style::bold<<rang::fg::blue <<"\t\t*          欢迎访问OneFileSystem              *" 
+        <<rang::style::reset<< endl;
         cout << "\t\t*               1. 注册用户                   *" << endl;
         cout << "\t\t*               2. 登录系统                   *" << endl;
         cout << "\t\t*               3. 命令帮助                   *" << endl;

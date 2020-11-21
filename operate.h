@@ -8,6 +8,8 @@
 //#include<stdlib.h>
 //#include<stdio.h>
 
+
+#include "rang.hpp"
 using namespace std;
 
 typedef struct OneFile         //文件结构体
